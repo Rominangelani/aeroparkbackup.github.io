@@ -251,6 +251,7 @@ body{
 }
 
 .qna-popup{
+    cursor: pointer;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -262,6 +263,18 @@ body{
     width: 300px;
     height: 50px;
     border-radius: 25px 25px 0 0;
+    transition: all .5s;
+}
+
+.qna-arrow{
+    margin: 0 10px;
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.qna-popup:hover{
+    background: #dd026a;
+    height: 60px;
 }
 
 .wsp-box{
@@ -384,7 +397,7 @@ body{
     </div>
 
     <div class="qna-popup">
-        <div class="item-arrow">𖤂</div>PREGUNTAS FRECUENTES<div class="item-arrow">𖤂</div>
+        <div class="qna-arrow">𖤂</div> PREGUNTAS FRECUENTES <div class="qna-arrow">𖤂</div>
     </div>
 </div>
 

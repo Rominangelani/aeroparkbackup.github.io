@@ -32,13 +32,18 @@ body{
 
 .home{
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
     height: 100%;
     width: 100%;
     background: #00549b;
 }
+
+.fc{ flex-direction: column;}
+.fr{ flex-direction: row;}
+.fw{ flex-wrap: wrap; }
+.fnw{ flex-wrap: nowrap; }
+.ac{ align-items: center; }
+.as{ align-items: flex-start; }
 
 .header{
     position: fixed;
@@ -315,12 +320,86 @@ body{
     filter: brightness(125%);
 }
 
+.p-carousel {
+  width: 100%;
+  max-width: 600px;
+}
+
+.p-carousel-viewport {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.p-carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.p-slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.p-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #00549b;
+}
+
+.dots{
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  margin: 0 10px;
+  width: 12px;
+  height: 12px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #ff007a;
+  transform: scale(1.2);
+}
+
+.info-btn{
+    background: #1b9f4e;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+
+.info-btn:hover{
+    background: #2fcf6c;
+}
+
+.p-carousel h2{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    -webkit-text-stroke: 1px #dd026a;
+    margin-bottom: 20px;
+}
 </style>
 
 </head>
 <body>
 
-<a class="wsp-box" href="https://web.whatsapp.com/send?phone=5491141856624&text=Hola+*Aeropark*%21+te+contacto+desde+tu+sitio+web">
+<a class="wsp-box" href="https://api.whatsapp.com/send?phone=5491141856624&text=Hola%20*Aeropark*,%20te%20contacto%20a%20trav%C3%A9s%20del%20sitio%20web%20https://www.aeropark.com.ar/">
     <img src="whatsapp.png" class="wsp" />
 </a>
 
@@ -358,7 +437,7 @@ body{
     </div>
 </div>
 
-<div class="home">
+<div class="home fc ac">
     <div class="carousel-container">
         <button class="nav prev">&#10094;</button>
 
@@ -408,6 +487,52 @@ body{
 
     <div class="faq-button">
         <div class="faq-arrow">𖤂</div> PREGUNTAS FRECUENTES <div class="faq-arrow">𖤂</div>
+    </div>
+</div>
+
+<div class="home fr fw as">
+    <div class="p-texts">
+        <h1 style="font-size: 38px; margin-bottom: 10px;-webkit-text-stroke: 1px #4188c8;font-weight: 800;">AEROPARK</h1>
+        <span style="font-size: 18px; margin-bottom: 10px;">Es un complejo de <strong>atracciones en altura</strong> que</span><br />
+        <span style="font-size: 19.3px; margin-bottom: 10px;">incluyen <strong>43 desafíos</strong> únicos repartidos en</span><br />
+        <span style="font-size: 20px; margin-bottom: 10px;"><strong>6 niveles de dificultad.</strong></span><br />
+        <br />
+        <span style="font-size: 23.5px; margin-bottom: 10px;">Un recorrido completo te brindará</span><br />
+        <span style="font-size: 23.5px; margin-bottom: 10px;"><strong>2 horas de diversión y adrenalina.</strong></span><br />
+        <br />
+        <span style="font-size: 19px; margin-bottom: 10px;">Siempre contarás con el apoyo de nuestros</span><br />
+        <span style="font-size: 18px; margin-bottom: 10px;"><strong>guías altamente capacitados y entretenidos</strong></span><br />
+        <span style="font-size: 19.8px; margin-bottom: 10px;">quienes estarán allí para asistirte en caso</span><br />
+        <span style="font-size: 20px; margin-bottom: 10px;">de que lo necesites.</span><br />
+        <br /><br />
+        <a class="info-btn" href="https://api.whatsapp.com/send?phone=5491141856624&text=Hola%20*Aeropark*,%20te%20contacto%20a%20trav%C3%A9s%20del%20sitio%20web%20https://www.aeropark.com.ar/">MÁS INFO</a>
+    </div>
+    <div class="p-carousel">
+        <h2>¡DIVERSIÓN DE ALTO VUELO!</h2>
+
+        <div class="p-carousel-viewport">
+            <div class="p-carousel-track">
+                <div class="p-slide"><img src="circuito (1).png"></div>
+                <div class="p-slide"><img src="circuito (2).png"></div>
+                <div class="p-slide"><img src="circuito (3).png"></div>
+                <div class="p-slide"><img src="circuito (4).png"></div>
+                <div class="p-slide"><img src="circuito (5).png"></div>
+                <div class="p-slide"><img src="circuito (6).png"></div>
+                <div class="p-slide"><img src="circuito (7).png"></div>
+                <div class="p-slide"><img src="circuito (8).png"></div>
+            </div>
+        </div>
+
+        <div class="dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+            <span class="dot" data-index="6"></span>
+            <span class="dot" data-index="7"></span>
+        </div>
     </div>
 </div>
 
@@ -494,6 +619,44 @@ body{
     faqButton.addEventListener("click", () => {
         faqButton.classList.add("hide");
     });
+
+    const pTrack = document.querySelector(".p-carousel-track");
+    const pSlides = document.querySelectorAll(".p-slide");
+    const pDots = document.querySelectorAll(".dot");
+
+    let pIndex = 0;
+    const pTotal = pSlides.length;
+    let pInterval;
+
+    function moveToSlide(i) {
+        pIndex = i;
+        pTrack.style.transform = `translateX(-${pIndex * 100}%)`;
+
+        pDots.forEach(dot => dot.classList.remove("active"));
+        pDots[pIndex].classList.add("active");
+    }
+
+    function startAutoPlay() {
+        pInterval = setInterval(() => {
+            pIndex = (pIndex + 1) % pTotal;
+            moveToSlide(pIndex);
+        }, 3000);
+    }
+
+    function resetAutoPlay() {
+        clearInterval(pInterval);
+        startAutoPlay();
+    }
+
+    pDots.forEach(dot => {
+        dot.addEventListener("click", (e) => {
+            const i = parseInt(e.target.dataset.index);
+            moveToSlide(i);
+            resetAutoPlay();
+        });
+    });
+
+    startAutoPlay();
 </script>
 </body>
 </html>

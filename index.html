@@ -16,6 +16,7 @@
     font-family: "Poppins", sans-serif;
     font-style: normal;
     color: #fff;
+    cursor: default;
 }
 
 :root {
@@ -164,11 +165,6 @@ body{
 
 .item-menu{
     font-size: 14px;
-}
-
-.item-menu-item:hover{
-    background: #fff;
-    color: #8a0040;
 }
 
 .item-park{
@@ -415,8 +411,7 @@ body{
 .rule-texts{
     display: flex;
     padding: 60px 40px;
-    margin: 0 20px;
-    width: auto;
+    width: 280px;
     height: auto;
     text-align: center;
     border-radius: 25px;
@@ -430,6 +425,57 @@ body{
 .rule2{ background: #c33c44; }
 .rule3{ background: #64adb0; }
 
+.rule {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.rule-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.rule:hover .rule-inner {
+    transform: rotateY(180deg);
+}
+
+.rule-front, .rule-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+.rule-front {
+    z-index: 2;
+}
+
+.rule-back {
+    transform: rotateY(180deg);
+}
+
+.rule:hover .rule-inner {
+    transform: rotateY(180deg) scale(1.03);
+}
+
+.rule-texts-hover{
+    background: #fff;
+}
+
+.rule-texts-hover p span, .rule-texts-hover h3{
+    color: #00549b;
+}
+
+.rule-item{
+    margin: 0 60px;
+}
 </style>
 
 </head>
@@ -581,40 +627,97 @@ body{
 </div>
 
 <div class="rules fr jc as">
-    <div class="rule fc jc ac">
-        <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/zapatillas-128x128.png" />
-        <div class="rule-texts rule1 fc jc ac">
-                <h3>CALZADO DEPORTIVO</h3><br />
-            <p>
-                <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
-                <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
-                <span style="font-size: 21px;">con tapones, ni calzados</span><br />
-                <span style="font-size: 25px;">abiertos</span>
-            </p>
+    <div class="rule-item">
+        <div class="rule fc jc ac">
+            <div class="rule-inner">
+                <div style="display: flex;" class="rule-front fc jc ac">
+                    <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/zapatillas-128x128.png" />
+                    <div class="rule-texts rule1 fc jc ac">
+                            <h3>CALZADO DEPORTIVO</h3><br />
+                        <p>
+                            <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                            <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                            <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                            <span style="font-size: 25px;">abiertos</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex;" class="rule-back fc jc ac">
+                    <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/zapatillas-128x128.png" />
+                    <div class="rule-texts rule-texts-hover rule1 fc jc ac">
+                        <h3>CALZADO DEPORTIVO</h3><br />
+                        <p>
+                            <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                            <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                            <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                            <span style="font-size: 25px;">abiertos</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="rule fc jc ac">
-        <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/altura-128x128.png" />
-        <div class="rule-texts rule2 fc jc ac">
-                <h3>CALZADO DEPORTIVO</h3><br />
-            <p>
-                <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
-                <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
-                <span style="font-size: 21px;">con tapones, ni calzados</span><br />
-                <span style="font-size: 25px;">abiertos</span>
-            </p>
+    <div class="rule-item">
+        <div class="rule fc jc ac">
+            <div class="rule-inner">
+                <div style="display: flex;" class="rule-front fc jc ac">
+                    <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/altura-128x128.png" />
+                    <div class="rule-texts rule2 fc jc ac">
+                            <h3>CALZADO DEPORTIVO</h3><br />
+                        <p>
+                            <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                            <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                            <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                            <span style="font-size: 25px;">abiertos</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex;" class="rule-back fc jc ac">
+                    <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/altura-128x128.png" />
+                    <div class="rule-texts rule-texts-hover rule1 fc jc ac">
+                        <h3>CALZADO DEPORTIVO</h3><br />
+                        <p>
+                            <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                            <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                            <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                            <span style="font-size: 25px;">abiertos</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="rule fc jc ac">
-        <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/horario-128x128.png" />
-        <div class="rule-texts rule3 fc jc ac">
-                <h3>CALZADO DEPORTIVO</h3><br />
-            <p>
-                <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
-                <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
-                <span style="font-size: 21px;">con tapones, ni calzados</span><br />
-                <span style="font-size: 25px;">abiertos</span>
-            </p>
+    <div class="rule-item">
+        <div class="rule fc jc ac">
+            <div class="rule-inner">
+                <div style="display: flex;" class="rule-front fc jc ac">
+                    <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/horario-128x128.png" />
+                    <div class="rule-texts rule3 fc jc ac">
+                            <h3>CALZADO DEPORTIVO</h3><br />
+                        <p>
+                            <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                            <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                            <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                            <span style="font-size: 25px;">abiertos</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex;" class="rule-back fc jc ac">
+                    <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/horario-128x128.png" />
+                    <div class="rule-texts rule-texts-hover rule1 fc jc ac">
+                        <h3>CALZADO DEPORTIVO</h3><br />
+                        <p>
+                            <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                            <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                            <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                            <span style="font-size: 25px;">abiertos</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

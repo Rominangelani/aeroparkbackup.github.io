@@ -44,6 +44,7 @@ body{
 .fnw{ flex-wrap: nowrap; }
 .ac{ align-items: center; }
 .as{ align-items: flex-start; }
+.jc{ justify-content: center; }
 
 .header{
     position: fixed;
@@ -71,6 +72,7 @@ body{
     border-radius: 25px;
     cursor: pointer;
     transition: .5s;
+    text-decoration: none;
 }
 
 .header-item:hover{
@@ -398,6 +400,36 @@ body{
 .p-texts{
     margin-right: 100px;
 }
+
+.rules{
+    display: flex;
+    height: 70%;
+    width: 100%;
+    background: #00549b;
+}
+
+.rule{
+    display: flex;
+}
+
+.rule-texts{
+    display: flex;
+    padding: 60px 40px;
+    margin: 0 20px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.rule-img{
+    transform: translateY(50px);
+}
+
+.rule1{ background: #cd8812; }
+.rule2{ background: #c33c44; }
+.rule3{ background: #64adb0; }
+
 </style>
 
 </head>
@@ -410,9 +442,9 @@ body{
 <div class="header">
     <a href="#" class="logo-box"><img class="logo" src="logo.png"/></a>
     <div class="header-items">
-        <div class="header-item item-park">
+        <a href="#park" class="header-item item-park">
             Parque
-        </div>
+        </a>
         <div class="header-item">
             Preguntas
         </div>
@@ -494,7 +526,9 @@ body{
     </div>
 </div>
 
-<div class="home fr fw as">
+<div id="park" style="width: 100%; height: 10vh;background: #00549b;"></div>
+
+<div class="home fr fw as" style="height: 90%;">
     <div class="p-texts">
         <h1 style="font-size: 48px; margin-bottom: 10px;-webkit-text-stroke: 1px #4188c8;font-weight: 800;">AEROPARK</h1>
         <p style="margin-bottom: 10px;">
@@ -542,6 +576,45 @@ body{
             <span class="dot" data-index="5"></span>
             <span class="dot" data-index="6"></span>
             <span class="dot" data-index="7"></span>
+        </div>
+    </div>
+</div>
+
+<div class="rules fr jc as">
+    <div class="rule fc jc ac">
+        <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/zapatillas-128x128.png" />
+        <div class="rule-texts rule1 fc jc ac">
+                <h3>CALZADO DEPORTIVO</h3><br />
+            <p>
+                <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                <span style="font-size: 25px;">abiertos</span>
+            </p>
+        </div>
+    </div>
+    <div class="rule fc jc ac">
+        <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/altura-128x128.png" />
+        <div class="rule-texts rule2 fc jc ac">
+                <h3>CALZADO DEPORTIVO</h3><br />
+            <p>
+                <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                <span style="font-size: 25px;">abiertos</span>
+            </p>
+        </div>
+    </div>
+    <div class="rule fc jc ac">
+        <img class="rule-img" src="https://www.aeropark.com.ar/wp-content/uploads/2019/01/horario-128x128.png" />
+        <div class="rule-texts rule3 fc jc ac">
+                <h3>CALZADO DEPORTIVO</h3><br />
+            <p>
+                <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
+                <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
+                <span style="font-size: 21px;">con tapones, ni calzados</span><br />
+                <span style="font-size: 25px;">abiertos</span>
+            </p>
         </div>
     </div>
 </div>

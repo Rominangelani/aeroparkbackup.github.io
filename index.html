@@ -1,1 +1,406 @@
-<h1>Hola Mundo, mi sitio web en GitHub Pages</h1>
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Aeropark - Parque indoor de escalada</title>
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #fff;
+}
+
+:root {
+  --card-width: 300px; /* 👈 SOLO TOCÁS ESTO */
+  --gap: 20px;
+  --visible-cards: 4;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: #00549b;
+}
+
+.header{
+    position: fixed;
+    z-index: 15;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    background: #dd026a;
+    font-weight: 600;
+}
+
+.header-items{
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-item{
+    padding: 5px 15px;
+    background: #0000;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.header-item:hover{
+    background: #8a0040;
+    transition: .5s;
+}
+
+.item-events{
+    padding: 5px;
+    width: 120px;
+}
+
+.item-arrow{
+    margin-left: 10px;
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.item-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item-events:hover .item-arrow{
+    transform: rotate(0deg);
+    transition: .5s;
+}
+
+.item-events .item-menu{
+    padding: 5px 0;
+    width: 120px;
+    background: #8a0040;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    display: none;
+    text-align: center;
+}
+
+.item-events:hover .item-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-item-contact{
+    margin: 0 5px; 
+    height: 24px;
+    background: #00549b;
+}
+
+.logo{
+    margin-left: 55px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.logo:hover{
+    width: 150px;
+    height: auto;
+    transition: 1s;
+}
+
+.item-tickets{
+    padding: 5px;
+    width: 170px;
+}
+
+.item-tickets:hover .item-arrow{
+    transform: rotate(0deg);
+    transition: .5s;
+}
+
+.item-tickets .item-menu{
+    padding: 5px 0;
+    width: 170px;
+    background: #8a0040;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    display: none;
+    text-align: center;
+}
+
+.item-tickets:hover .item-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-menu{
+    font-size: 14px;
+}
+
+.item-menu-item:hover{
+    background: #fff;
+    color: #8a0040;
+}
+
+.item-park{
+    margin-right: 5px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: calc(
+    var(--card-width) * var(--visible-cards) + 
+    var(--gap) * (var(--visible-cards) - 1)
+  );
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: var(--gap);
+}
+
+.card {
+  width: var(--card-width);
+  height: 536px;
+  flex: 0 0 var(--card-width);
+}
+
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease;
+}
+
+.img-back {
+  z-index: 1;
+}
+
+.img-front {
+  z-index: 2;
+}
+
+.card-img-wrapper:hover .img-front {
+  opacity: 0;
+}
+
+.nav {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 15px;  
+}
+
+.border1{
+    box-sizing: border-box;
+    border: 5px solid #fff;
+    border-radius: 25px;
+}
+
+.border2{
+    box-sizing: border-box;
+    border: 5px solid #dd026a;
+    border-radius: 25px;
+}
+
+.nav:hover{
+    color: #dd026a;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+    <a href="#" class="logo-box"><img class="logo" src="logo.png"/></a>
+    <div class="header-items">
+        <div class="header-item item-park">
+            Parque
+        </div>
+        <div class="header-item">
+            Preguntas
+        </div>
+        <div class="header-item item-events">
+            <div class="item-title">
+                Eventos <div class="item-arrow">𖤂</div>
+            </div>
+            <div class="item-menu">
+                <div class="item-menu-item">Cumpleaños</div>
+                <div class="item-menu-item">Empresa</div>
+            </div>
+        </div>
+        <div class="header-item item-tickets">
+            <div class="item-title">
+                Reserva online<div class="item-arrow">𖤂</div>
+            </div>
+            <div class="item-menu">
+                <div class="item-menu-item">Reservá tu pase</div>
+                <div class="item-menu-item">Reservá tu cumple</div>
+                <div class="item-menu-item">Comprá tu Giftcard</div>
+            </div>
+        </div>
+        <div class="header-item header-item-contact">
+            Contacto
+        </div>
+    </div>
+</div>
+
+<div class="home">
+    <div class="carousel-container">
+        <button class="nav prev">&#10094;</button>
+
+        <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="track">
+                <div class="card border1">
+                    <div class="card-img-wrapper">
+                        <img src="CARD (1).png" class="img-front">
+                        <img src="CARD HOVER (1).png" class="img-back">
+                    </div>
+                </div>
+                <div class="card border2">
+                    <div class="card-img-wrapper">
+                        <img src="CARD (2).png" class="img-front">
+                        <img src="CARD HOVER (2).png" class="img-back">
+                    </div>
+                </div>
+                <div class="card border1">
+                    <div class="card-img-wrapper">
+                        <img src="CARD (3).png" class="img-front">
+                        <img src="CARD HOVER (3).png" class="img-back">
+                    </div>
+                </div>
+                <div class="card border2">
+                    <div class="card-img-wrapper">
+                        <img src="CARD (4).png" class="img-front">
+                        <img src="CARD HOVER (4).png" class="img-back">
+                    </div>
+                </div>
+                <div class="card border1">
+                    <div class="card-img-wrapper">
+                        <img src="CARD (5).png" class="img-front">
+                        <img src="CARD HOVER (5).png" class="img-back">
+                    </div>
+                </div>
+                <div class="card border2">
+                    <div class="card-img-wrapper">
+                        <img src="CARD (6).png" class="img-front">
+                        <img src="CARD HOVER (6).png" class="img-back">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="nav next">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    const track = document.getElementById("track");
+    let cards = Array.from(track.children);
+
+    const visibleCards = 4;
+    let index = visibleCards;
+
+    // 🔥 CLONADO
+    const firstClones = cards.slice(0, visibleCards);
+    const lastClones = cards.slice(-visibleCards);
+
+    firstClones.forEach(card => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+    });
+
+    lastClones.forEach(card => {
+    const clone = card.cloneNode(true);
+    track.insertBefore(clone, track.firstChild);
+    });
+
+    // Actualizar lista
+    cards = Array.from(track.children);
+
+    // 👇 GAP desde CSS
+    const gap = parseInt(getComputedStyle(track).gap) || 0;
+
+    // 👇 FUNCIÓN DINÁMICA (CLAVE)
+    function getCardWidth() {
+    return cards[0].getBoundingClientRect().width + gap;
+    }
+
+    // Posición inicial
+    track.style.transform = `translateX(-${getCardWidth() * index}px)`;
+
+    // BOTONES
+    document.querySelector(".next").addEventListener("click", () => {
+    index++;
+    moveCarousel();
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => {
+    index--;
+    moveCarousel();
+    });
+
+    function moveCarousel() {
+    track.style.transition = "transform 0.5s ease";
+    track.style.transform = `translateX(-${getCardWidth() * index}px)`;
+    }
+
+    // 🔁 LOOP INFINITO
+    track.addEventListener("transitionend", () => {
+    if (index >= cards.length - visibleCards) {
+        track.style.transition = "none";
+        index = visibleCards;
+        track.style.transform = `translateX(-${getCardWidth() * index}px)`;
+    }
+
+    if (index <= 0) {
+        track.style.transition = "none";
+        index = cards.length - visibleCards * 2;
+        track.style.transform = `translateX(-${getCardWidth() * index}px)`;
+    }
+    });
+</script>
+</body>
+</html>

@@ -46,6 +46,8 @@ body{
 .ac{ align-items: center; }
 .as{ align-items: flex-start; }
 .jc{ justify-content: center; }
+.jsb{ justify-content: space-between; }
+.jsa{ justify-content: space-around; }
 
 .header{
     position: fixed;
@@ -235,7 +237,7 @@ body{
   border: none;
   font-size: 30px;
   cursor: pointer;
-  margin: 0 15px;  
+  margin: 0 10px;  
 }
 
 .border1{
@@ -318,6 +320,10 @@ body{
     filter: brightness(125%);
 }
 
+.presentation{
+    padding: 0 0 0 2%;
+}
+
 .p-carousel {
   width: 100%;
   max-width: 600px;
@@ -391,10 +397,6 @@ body{
     font-size: 30px;
     -webkit-text-stroke: 1px #dd026a;
     margin-bottom: 20px;
-}
-
-.p-texts{
-    margin-right: 100px;
 }
 
 .rules{
@@ -475,6 +477,34 @@ body{
 
 .rule-item{
     margin: 0 60px;
+}
+
+.tickets-box{
+    width: 100;
+    background-image: url(tickets-background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.tickets-frontground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tickets-box p{
+    text-align: center;
+    width: 80%;
+}
+
+.tickets-box-items{
+    display: flex;
+    width: 80%;
 }
 </style>
 
@@ -574,25 +604,25 @@ body{
 
 <div id="park" style="width: 100%; height: 10vh;background: #00549b;"></div>
 
-<div class="home fr fw as" style="height: 90%;">
+<div class="home fr fw as jsa presentation" style="height: 90%;">
     <div class="p-texts">
         <h1 style="font-size: 48px; margin-bottom: 10px;-webkit-text-stroke: 1px #4188c8;font-weight: 800;">AEROPARK</h1>
         <p style="margin-bottom: 10px;">
-            <span style="font-size: 22px;">Es un complejo de <strong>atracciones en altura</strong> que</span><br />
-            <span style="font-size: 23.3px;">incluyen <strong>43 desafíos</strong> únicos repartidos en</span><br />
-            <span style="font-size: 24px;"><strong>6 niveles de dificultad.</strong></span>
+            <span style="font-size: 22px;">Es un complejo de <strong>atracciones en altura</strong> que incluyen</span><br />
+            <span style="font-size: 23.3px;">incluyen <strong>43 desafíos</strong> únicos repartidos en <strong>6 niveles</strong></span><br />
+            <span style="font-size: 24px;"><strong>de dificultad.</strong></span>
         </p>
         
         <p style="margin-bottom: 10px;">
-            <span style="font-size: 27.5px;">Un recorrido completo te brindará</span><br />
-            <span style="font-size: 27.5px;"><strong>2 horas de diversión y adrenalina.</strong></span>
+            <span style="font-size: 27.5px;"><strong>Un recorrido completo te brindará 2 horas<br />
+            <span style="font-size: 32px;">de diversión y adrenalina.</span></strong></span>
         </p>
         
         <p style="margin-bottom: 28px;">
-            <span style="font-size: 23px;">Siempre contarás con el apoyo de nuestros</span><br />
-            <span style="font-size: 22px;"><strong>guías altamente capacitados y entretenidos</strong></span><br />
-            <span style="font-size: 23.8px;">quienes estarán allí para asistirte en caso</span><br />
-            <span style="font-size: 24px;">de que lo necesites.</span>
+            <span style="font-size: 23px;">Siempre contarás con el apoyo de nuestros<strong> guías</strong></span><br />
+            <span style="font-size: 23.9px;"><strong>altamente capacitados y entretenidos</strong> quienes</span><br />
+            <span style="font-size: 24px;">estarán allí para asistirte en caso de que lo</span><br />
+            <span style="font-size: 24px;">necesites.</span>
         </p>
 
         <a class="info-btn" href="https://api.whatsapp.com/send?phone=5491141856624&text=Hola%20*Aeropark*,%20te%20contacto%20a%20trav%C3%A9s%20del%20sitio%20web%20https://www.aeropark.com.ar/">MÁS INFO</a>
@@ -638,7 +668,7 @@ body{
                             <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
                             <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
                             <span style="font-size: 21px;">con tapones, ni calzados</span><br />
-                            <span style="font-size: 25px;">abiertos</span>
+                            <span style="font-size: 25px;"><strong>abiertos</strong></span>
                         </p>
                     </div>
                 </div>
@@ -651,7 +681,7 @@ body{
                             <span style="font-size: 22.6px;">No se permitirán crocs,</span><br />
                             <span style="font-size: 21px;">sandalias, ojotas, botines</span><br />
                             <span style="font-size: 21px;">con tapones, ni calzados</span><br />
-                            <span style="font-size: 25px;">abiertos</span>
+                            <span style="font-size: 25px;"><strong>abiertos</strong></span>
                         </p>
                     </div>
                 </div>
@@ -719,6 +749,25 @@ body{
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="tickets-box fc jc ac">
+    <img src="tickets-frontground.png" class="tickets-frontground" alt="">
+    <h2>PARA DISFRUTAR EN FAMILIA</h2>
+    <p>Nuestra aventura de alto vuelo es un destino favorito de las familias, un lugar especial para compartir, padres e hijos, al mismo tiempo y en el mismo lugar, cumpliendo objetivos comunes, superando miedos
+    u obstáculos, ayudándose mutuamente a construir la confianza individual, mejorar la fuerza y el atletismo,
+    a trabajar en equipo teniendo la incomparable sensación del logro compartido en familia.</p>
+    <div class="tickets-box-items fr jsa ac fw">
+        <div style="display: flex; text-align: center; font-size: 28px; font-weight: 600;" class="fc jc ac">
+            ¡Reservá tu lugar para una<br />
+            aventura de alto vuelo!
+        </div>
+        <img src="https://www.aeropark.com.ar/wp-content/uploads/2023/07/aeroticket2.png" width="350px" height="auto" />
+        <div style="display: flex; text-align: center; font-size: 28px; font-weight: 600;" class="fc jc ac">
+            Travesía Aeropark<br />
+            $25.000
         </div>
     </div>
 </div>

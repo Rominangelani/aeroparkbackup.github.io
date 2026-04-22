@@ -48,7 +48,7 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: auto;
+    height: 40px;
     padding: 10px 0;
     background: #dd026a;
     font-weight: 600;
@@ -191,6 +191,7 @@ body{
 }
 
 .card {
+  cursor: pointer;
   width: var(--card-width);
   height: 536px;
   flex: 0 0 var(--card-width);
@@ -250,31 +251,40 @@ body{
     color: #dd026a;
 }
 
-.qna-popup{
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    background: #dd026a;
-    width: 300px;
-    height: 50px;
-    border-radius: 25px 25px 0 0;
-    transition: all .5s;
+.faq-button{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: all .4s;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  background: #dd026a;
+  width: 300px;
+  height: 50px;
+  border-radius: 25px 25px 0 0;
 }
 
-.qna-arrow{
+.faq-arrow{
     margin: 0 10px;
     transform: rotate(180deg);
     transition: .5s;
 }
 
-.qna-popup:hover{
+.faq-button:hover{
     background: #dd026a;
     height: 60px;
+}
+
+.faq-button.hide {
+  transform: translateX(-50%) translateY(120px);
+  opacity: 0;
 }
 
 .wsp-box{
@@ -396,9 +406,13 @@ body{
         <button class="nav next">&#10095;</button>
     </div>
 
-    <div class="qna-popup">
-        <div class="qna-arrow">𖤂</div> PREGUNTAS FRECUENTES <div class="qna-arrow">𖤂</div>
+    <div class="faq-button">
+        <div class="faq-arrow">𖤂</div> PREGUNTAS FRECUENTES <div class="faq-arrow">𖤂</div>
     </div>
+</div>
+
+<div class="home">
+    Cargando...
 </div>
 
 <script>
@@ -465,6 +479,20 @@ body{
         index = cards.length - visibleCards * 2;
         track.style.transform = `translateX(-${getCardWidth() * index}px)`;
     }
+    });
+
+    const faqButton = document.querySelector(".faq-button");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 0) {
+            faqButton.classList.add("hide");
+        } else {
+            faqButton.classList.remove("hide");
+        }
+    });
+
+    faqButton.addEventListener("click", () => {
+        faqButton.classList.add("hide");
     });
 </script>
 </body>

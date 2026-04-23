@@ -524,7 +524,7 @@ body{
 }
 
 .ticket-img{
-    margin: 0 20px;
+    margin: 20px;
 }
 
 .faq-container{
@@ -532,13 +532,11 @@ body{
   justify-content: center;
   padding: 20px 10px;
   background: #00549b;
+  overflow: hidden;
 }
 
 .faq{
-  width: 100%;
-  max-width: 900px;
-  max-height: 400px;
-  overflow-y: auto;
+  width: 90%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -602,6 +600,21 @@ body{
 .faq-item.active .faq-icon {
   transform: rotate(45deg); /* convierte + en X */
 }
+
+.faq-q-icon{
+    color: #fff;
+    background: #1b9f4e;
+    border-radius: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.faq-q-icon:hover{
+    color: #1b9f4e;
+    background: #fff;
+}
 </style>
 
 </head>
@@ -625,8 +638,8 @@ body{
                 Eventos <div class="item-arrow">𖤂</div>
             </div>
             <div class="item-menu">
-                <a class="item-menu-item">Cumpleaños</a>
-                <a class="item-menu-item">Empresa</a>
+                <a href="#birthday" class="item-menu-item">Cumpleaños</a>
+                <a href="#companies" class="item-menu-item">Empresa</a>
             </div>
         </div>
         <div class="header-item item-tickets">
@@ -635,11 +648,11 @@ body{
             </div>
             <div class="item-menu">
                 <a href="#tickets" class="item-menu-item">Reservá tu pase</a>
-                <a class="item-menu-item">Reservá tu cumple</a>
-                <a class="item-menu-item">Comprá tu Giftcard</a>
+                <a href="#birthday" class="item-menu-item">Reservá tu cumple</a>
+                <a href="#giftcard" class="item-menu-item">Comprá tu Giftcard</a>
             </div>
         </div>
-        <a class="header-item header-item-contact">
+        <a href="#contact" class="header-item header-item-contact">
             Contacto
         </a>
     </div>
@@ -864,7 +877,7 @@ body{
             aventura de alto vuelo!
             <img src="tickets-arrow.png" style="width: 100px; height: auto;" />
         </div>
-        <img src="https://www.aeropark.com.ar/wp-content/uploads/2023/07/aeroticket2.png" width="350px" height="auto" class="ticket-img" />
+        <img src="ticket.png" width="350px" height="auto" class="ticket-img" />
         <div style="display: flex; text-align: center; font-size: 24px; font-weight: 600;" class="fc jc ac">
             Travesía Aeropark<br />
             $25.000
@@ -876,7 +889,8 @@ body{
 
 <div id="faq" style="width: 100%; height: 10vh;background: #00549b;"></div>
 
-<div class="faq-container">
+<div class="faq-container fc ac">
+    <h2 style="color: #fff; font-size:36px;">PREGUNTAS FRECUENTES</h2><br />
   <div class="faq">
     <div class="faq-item active">
       <button class="faq-question">
@@ -884,7 +898,7 @@ body{
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-answer">
-        <p class="faq-q">Aeropark es un parque aéreo tehcado <strong>(todas las atracciones incluídas están a más de 3 metros de altura)</strong> ubicado en la ciudad de <strong>Buenos Aires</strong> con <strong>43 desafíos</strong> únicos repartidos en <strong>6 niveles de dificultad </strong><a href="#park" style="color: #1b9f4e; font-weight: 700; text-decoration: none; cursor: pointer;">+</a></p>
+        <p class="faq-q">Aeropark es un parque aéreo tehcado <strong>(todas las atracciones incluídas están a más de 3 metros de altura)</strong> ubicado en la ciudad de <strong>Buenos Aires</strong> con <strong>43 desafíos</strong> únicos repartidos en <strong>6 niveles de dificultad </strong><a href="#tickets" class="faq-q-icon"><span style="opacity: 0; font-size: 10px;">+</span>+<span style="opacity: 0; font-size: 10px;">+</span></a></p>
       </div>
     </div>
     
@@ -894,7 +908,7 @@ body{
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-answer">
-        <p class="faq-q">La experiencia individual dura<strong> 2 horas </strong><a href="#park" style="color: #1b9f4e; font-weight: 700; text-decoration: none; cursor: pointer;">+</a></p>
+        <p class="faq-q">La experiencia individual dura<strong> 2 horas </strong><a href="#tickets" class="faq-q-icon"><span style="opacity: 0; font-size: 10px;">+</span>+<span style="opacity: 0; font-size: 10px;">+</span></a></p>
       </div>
     </div>
     
@@ -904,9 +918,120 @@ body{
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-answer">
-        <p class="faq-q">Para la experiencia individual conviene reservar online para asegurar el cupo. Tambien podes venir sin reserva previa (no recomendado en vacaciones de invierno).<a href="#tickets" style="color: #1b9f4e; font-weight: 700; text-decoration: none; cursor: pointer;">+</a></p>
+        <p class="faq-q">Para la experiencia individual conviene reservar online para asegurar el cupo. Tambien podes venir sin reserva previa (no recomendado en vacaciones de invierno).<a href="#tickets" class="faq-q-icon"><span style="opacity: 0; font-size: 10px;">+</span>+<span style="opacity: 0; font-size: 10px;">+</span></a></p>
       </div>
     </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Hay límite de edad?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">No, lo importante es cumplir con el límite de altura y peso.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Hay límite de altura?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">Sí, por seguridad la altura mínima es de 1,20 metros. Si tenes duda, recomendamos medir al peque antes de venir.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Hay límite de peso?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">Sí, por seguridad el límite de peso es de 120 kg.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Necesito experiencia previa?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">No. Antes de comenzar se brinda una charla instructiva y medidas de seguridad.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Qué incluye la entrada?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">Incluye charla instructiva, arnés, casco, guantes y asistencia permanente durante toda la travesía <a href="#tickets" class="faq-q-icon"><span style="opacity: 0; font-size: 10px;">+</span>+<span style="opacity: 0; font-size: 10px;">+</span></a></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Es una actividad segura?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">La experiencia se realiza con equipamiento específico e indicaciones previas, además de asistencia permanente del Staff. Los participantes estan siempre conectados mediante un mosqueton de triple seguridad a un sistema de linea continua el cual no permite desvicularse en nunguna parte del circuito.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Se puede festejar un cumpleaños en Aeropark?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">Sí. Aeropark es ideal para festejos inolvidables y originales, lenos de adrenalina. Festejamos cumpleaños infantiles (hasta 13 años de edad) y Cumpleaños adultos (+14) <a href="#birthday" class="faq-q-icon"><span style="opacity: 0; font-size: 10px;">+</span>+<span style="opacity: 0; font-size: 10px;">+</span></a></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Aeropark organiza eventos para empresas?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">Sí. Ofrecemos propuestas para empresas y eventos corporativos <a href="#companies" class="faq-q-icon"><span style="opacity: 0; font-size: 10px;">+</span>+<span style="opacity: 0; font-size: 10px;">+</span></a></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Puedo regalar la experiencia?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">Sí. Aeropark ofrece gift cards para regalar la experiencia <a href="#giftcard" class="faq-q-icon"><span style="opacity: 0; font-size: 10px;">+</span>+<span style="opacity: 0; font-size: 10px;">+</span></a></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Aeropark es indoor (techado)?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">Sí, somos el parque aereo indoor mas grande de argentina.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3 class="faq-q">¿Qué tipo de desafíos hay?</h3>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p class="faq-q">Hay puentes colgantes, pasos de equilibrio, toboganes, túneles, carrito minero y palestra de 8 metros para escalada y rapel <a href="#park" class="faq-q-icon"><span style="opacity: 0; font-size: 10px;">+</span>+<span style="opacity: 0; font-size: 10px;">+</span></a></p>
+      </div>
+    </div>
+
   </div>
 </div>
 

@@ -20,7 +20,7 @@
 }
 
 :root {
-  --card-width: 300px; /* 👈 SOLO TOCÁS ESTO */
+  --card-width: 300px;
   --gap: 20px;
   --visible-cards: 4;
 }
@@ -562,7 +562,6 @@ body{
   color: #00549b;
 }
 
-/* ICONO + */
 .faq-icon {
   cursor: pointer;
   background: #00549b;
@@ -578,23 +577,24 @@ body{
   transition: transform 0.3s ease;
 }
 
-/* RESPUESTA */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding: 0 20px;
-  color: #333;
 }
 
-/* CUANDO ESTÁ ACTIVO */
+.faq-answer p{
+  color: #000;
+}
+
 .faq-item.active .faq-answer {
   max-height: 200px;
   padding: 10px 20px 20px;
 }
 
 .faq-item.active .faq-icon {
-  transform: rotate(45deg); /* convierte + en X */
+  transform: rotate(45deg);
 }
 
 .faq-q-icon{
@@ -610,6 +610,25 @@ body{
 .faq-q-icon:hover{
     color: #1b9f4e;
     background: #fff;
+}
+
+.birthday-texts-box{
+  max-width: 43%;
+}
+
+.birthday-items-box {
+  max-height: 250px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.birthday-items-box::-webkit-scrollbar {
+  width: 10px;
+}
+
+.birthday-items-box::-webkit-scrollbar-thumb {
+  background: #dd026a;
+  border-radius: 10px;
 }
 </style>
 
@@ -1035,27 +1054,67 @@ body{
 
 <div class="df fc fw ac jc" style="width: 100%; height: 100%; background: #4188c8;">
     <h1 style="font-size: 48px; margin-bottom: 10px;-webkit-text-stroke: 1px #4188c8;font-weight: 800;">CUMPLEAÑOS EN AEROPARK</h1>
-    <div class="df fr fw ac jsb">
-        <div class="p-texts">
+    <div class="df fr fw ac jc">
+        <div class="birthday-texts-box df fc jc ac p-texts">
             <p style="margin-bottom: 10px;">
-                <span style="font-size: 22px;">Es un complejo de <strong>atracciones en altura</strong> que incluyen</span><br />
-                <span style="font-size: 23.3px;">incluyen <strong>43 desafíos</strong> únicos repartidos en <strong>6 niveles</strong></span><br />
-                <span style="font-size: 24px;"><strong>de dificultad.</strong></span>
-            </p>
-            
-            <p style="margin-bottom: 10px;">
-                <span style="font-size: 27.5px;"><strong>Un recorrido completo te brindará 2 horas<br />
-                <span style="font-size: 32px;">de diversión y adrenalina.</span></strong></span>
-            </p>
-            
-            <p style="margin-bottom: 28px;">
-                <span style="font-size: 23px;">Siempre contarás con el apoyo de nuestros<strong> guías</strong></span><br />
-                <span style="font-size: 23.9px;"><strong>altamente capacitados y entretenidos</strong> quienes</span><br />
-                <span style="font-size: 24px;">estarán allí para asistirte en caso de que lo</span><br />
-                <span style="font-size: 24px;">necesites.</span>
+                <span style="font-size: 22px;">Sorprendé a tus invitados con una propuesta</span><br />
+                <span style="font-size: 26px;"><strong>inolvidable, super original y divertida.</strong></span><br />
+                <span style="font-size: 20.4px;">El servicio de Aeropark para cumpleaños incluye</span><br />
+                <span style="font-size: 26.5px;"><strong>todo</strong>, no tenés que ocuparte de nada.<br />
             </p>
 
-            <a class="info-btn" href="https://api.whatsapp.com/send?phone=5491141856624&text=Hola%20*Aeropark*,%20te%20contacto%20a%20trav%C3%A9s%20del%20sitio%20web%20https://www.aeropark.com.ar/">MÁS INFO</a>
+            <div class="birthday-items-box df fc ac jsa">
+                <div class="faq birthday-faq">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                        <h3 class="faq-q">LO QUE INCLUYE EL EVENTO</h3>
+                        <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-q">
+                                • Tarjetas de invitación (digitales y/o físicas).<br />
+                                • Salón ambientado y musicalizado.<br />
+                                • Bienvenida con gaseosas y snacks (papas fritas, palitos de maíz y palitos salados).<br />
+                                • Una hora para recorrer los circuitos de aventura y media hora<br />para abordar las palestras de escalada.<br />
+                                • Menú de pizza, gaseosas y agua libre (línea Coca-Cola o Pepsi).<br />
+                                • Torta de cumpleaños (chocotorta) con vela y bengala.<br />
+                                • Regalo para el agasajado.<br />
+                                • Sorteo entre todos los invitados de un regalo Aeropark.<br />
+                                • Souvenir para los invitados.<br />
+                                • Gastronomía para 2 adultos.<br />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                        <h3 class="faq-q">DETALLES DE LA ACTIVIDAD</h3>
+                        <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-q">
+                                • Instructores expertos y altamente capacitados darán la charla<br />instructiva de reglas de juego y medidas de seguridad.<br />
+                                • Brindarán el equipamiento especial: Arnés, mosquetón con triple<br />seguro para el Sistema de Vida Continua, guantes y casco.<br />
+                                • Se inicia la travesía sobre los distintos circuitos de puentes<br />colgantes que incluye 43 desafíos únicos repartidos en 6 niveles de dificultad diferentes.<br />
+                                • Finalmente comienza la pasada de a un participante por vez en la<br />palestra (escalada y rapel)<br />
+                                • Duración del evento: 2 horas y media.<br />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                        <h3 class="faq-q">SERVICIO OPCIONAL</h3>
+                        <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-q">• Cobertura fotográfica del evento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a style="margin-top: 20px;" class="info-btn" href="https://api.whatsapp.com/send?phone=5491141856624&text=Hola%20*Aeropark*,%20te%20contacto%20a%20trav%C3%A9s%20del%20sitio%20web%20https://www.aeropark.com.ar/">MÁS INFO</a>
         </div>
         <div class="p-carousel">
             <div class="p-carousel-viewport">
@@ -1088,7 +1147,6 @@ body{
     const visibleCards = 4;
     let index = visibleCards;
 
-    // 🔥 CLONADO
     const firstClones = cards.slice(0, visibleCards);
     const lastClones = cards.slice(-visibleCards);
 
@@ -1102,21 +1160,16 @@ body{
     track.insertBefore(clone, track.firstChild);
     });
 
-    // Actualizar lista
     cards = Array.from(track.children);
 
-    // 👇 GAP desde CSS
     const gap = parseInt(getComputedStyle(track).gap) || 0;
 
-    // 👇 FUNCIÓN DINÁMICA (CLAVE)
     function getCardWidth() {
     return cards[0].getBoundingClientRect().width + gap;
     }
 
-    // Posición inicial
     track.style.transform = `translateX(-${getCardWidth() * index}px)`;
 
-    // BOTONES
     document.querySelector(".next").addEventListener("click", () => {
     index++;
     moveCarousel();
@@ -1132,7 +1185,6 @@ body{
     track.style.transform = `translateX(-${getCardWidth() * index}px)`;
     }
 
-    // 🔁 LOOP INFINITO
     track.addEventListener("transitionend", () => {
     if (index >= cards.length - visibleCards) {
         track.style.transition = "none";
@@ -1201,23 +1253,23 @@ body{
         startAutoPlay();
     });
 
-    const items = document.querySelectorAll(".faq-item");
+    document.querySelectorAll(".faq").forEach(faqGroup => {
+    const items = faqGroup.querySelectorAll(".faq-item");
 
     items.forEach(item => {
-    const button = item.querySelector(".faq-question");
+        const button = item.querySelector(".faq-question");
 
-    button.addEventListener("click", () => {
+        button.addEventListener("click", () => {
 
-        // cerrar todos
-        items.forEach(i => {
-        if (i !== item) {
-            i.classList.remove("active");
-        }
+            items.forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove("active");
+                    }
+                });
+
+                item.classList.toggle("active");
+            });
         });
-
-        // toggle actual
-        item.classList.toggle("active");
-    });
     });
 </script>
 </body>

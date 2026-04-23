@@ -636,6 +636,51 @@ body{
     margin-top: -40px;
     padding-left: 40px;
 }
+
+.giftcard-box{
+    background-image: url(giftcard-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+}
+
+.giftcard-texts-box{
+    font-size: 14px;
+    transform: translate(-260px,70px);
+    max-width: 600px;
+    background: #fff;
+    border: 5px solid #c33c44;
+    border-radius: 25px;
+    padding: 20px 10px 20px 40px;
+}
+
+.giftcard-texts-box ul{
+    color: #c33c44;
+}
+
+.giftcard-texts-box ul li{
+    color: #000;
+}
+
+.giftcard-btn{
+    position: absolute;
+    transform: translateY(240px);
+    background: linear-gradient(120deg, #ff6060 3%, #cf2f2f 10%, #9f1b1b 87%);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.giftcard-btn:hover{
+    background: linear-gradient(120deg, #b2ff60 3%, #2fcf6c 10%, #1b9f4e 87%);
+    font-size: 30px;
+    transition: all .3s;
+}
 </style>
 
 </head>
@@ -1266,6 +1311,29 @@ body{
             </p>
         </div>
     </div>
+</div>
+
+<div id="giftcard" style="width: 100%; height: 5vh;background: #00549b;"></div>
+
+<div class="giftcard-box df fr fw ac jc" style="width: 100%; height: 100%;">
+    <img src="giftcard-frontground.png" class="tickets-frontground" alt="">
+    <div class="giftcard-texts-box">
+        <h3 style="color: #c33c44;">¿POR QUÉ COMPRAR UNA GIFTCARD?</h3>
+        <ul>
+            <li>Regalás diversión.</li>
+            <li>Accedés al parque sin reserva previa 🎟️, dentro de los horarios de apertura del parque🕐<br />
+            <span style="font-size: 14px;color: #000;">(El acceso sin reserva previa estará condicionado a que el parque no se encuentre con su capacidad completa🚫).</span></li>
+            <li>2 horas de experiencia⌛</li>
+            <li>6 (seis) circuitos de puentes🌉 + 2 subidas a la palestra de escalada y rápel🧗🏻.</li>
+            <li>Charla instructiva y de medidas de seguridad🧑🏻‍🚒</li>
+            <li>Equipamiento: Arnés, Casco y Guantes🧤</li>
+            <li>Asistencia permanente durante toda la travesía🧑🏻‍🏫</li>
+            <li>Puestos de hidratación💧</li>
+            <li>Vigencia: 6 meses📆</li>
+            <li>Disponemos de un cómodo Open Bar, para que escaladores y acompañantes disfruten de nuestros servicios gastronómicos.</li>
+        </ul>
+    </div>
+    <a class="giftcard-btn" href="#giftcard">COMPRÁ TU GIFTCARD</a>
 </div>
 
 <div class="home fc jc ac">

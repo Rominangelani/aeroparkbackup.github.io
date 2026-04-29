@@ -1366,17 +1366,17 @@ body{
             <br />
         </p>
         <div class="df fr jc ac">
-            <a style="margin-right: 20px;cursor: pointer;" href="https://www.instagram.com/aeroparkok/">
-                <img src="ig.png" width="30px" height="30px" />
+            <a style="margin-right: 20px;" href="https://www.instagram.com/aeroparkok/">
+                <img style="cursor: pointer;" src="ig.png" width="30px" height="30px" />
             </a>
-            <a style="margin-right: 20px;cursor: pointer;" href="https://www.instagram.com/aeroparkok/">
-                <img src="fb.png" width="30px" height="30px" />
+            <a style="margin-right: 20px;" href="https://www.facebook.com/Aeroparkar">
+                <img style="cursor: pointer;" src="fb.png" width="30px" height="30px" />
             </a>
-            <a style="margin-right: 20px;cursor: pointer;" href="https://www.instagram.com/aeroparkok/">
-                <img src="tt.png" width="30px" height="30px" />
+            <a style="margin-right: 20px;" href="https://www.tiktok.com/@aeroparkok">
+                <img style="cursor: pointer;" src="tt.png" width="30px" height="30px" />
             </a>
-            <a style="cursor: pointer;" href="#">
-                <img src="share.png" width="25px" height="30px" />
+            <a style="cursor: pointer;" onclick="compartir()" id="btnCompartir">
+                <img style="cursor: pointer;" src="share.png" width="25px" height="30px" />
             </a>
         </div>
     </div>
@@ -1521,6 +1521,49 @@ body{
             });
         });
     });
+
+    function compartir() {
+    if (navigator.share) {
+        // 📱 Celular o navegador compatible
+        navigator.share({
+        title: document.title,
+        text: 'Mirá esta página 👀',
+        url: window.location.href
+        })
+        .catch(err => console.log(err));
+        
+    } else {
+        // 💻 Escritorio o fallback
+        navigator.clipboard.writeText(window.location.href)
+        .then(() => {
+            mostrarMensaje("✅ Enlace copiado. ¡Listo para compartir!");
+        })
+        .catch(() => {
+            mostrarMensaje("❌ No se pudo copiar el enlace");
+        });
+    }
+    }
+
+    function mostrarMensaje(texto) {
+    const msg = document.createElement("div");
+    msg.innerText = texto;
+
+    msg.style.position = "fixed";
+    msg.style.bottom = "20px";
+    msg.style.left = "50%";
+    msg.style.transform = "translateX(-50%)";
+    msg.style.background = "#333";
+    msg.style.color = "#fff";
+    msg.style.padding = "10px 20px";
+    msg.style.borderRadius = "8px";
+    msg.style.zIndex = "1000";
+
+    document.body.appendChild(msg);
+
+    setTimeout(() => {
+        msg.remove();
+    }, 2500);
+    }
 </script>
 </body>
 </html>

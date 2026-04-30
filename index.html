@@ -682,17 +682,23 @@ body{
     transition: all .3s;
 }
 
-.contact-000{ font-size: 18px; font-weight: 600; color: #000; }
-.contact-005{ font-size: 18px; font-weight: 400; color: #00549b; }
 
-@media screen and (min-width: 1770px){
+.contact-p{ color: #000 }
+.contact-p, .contact-p span{ font-size: 16px; }
+.contact-000{ font-weight: 600; color: #000; }
+.contact-005{ font-weight: 400; color: #00549b; }
+
+@media screen and (max-width: 1770px){
+    .header{
+        height: 10vh;
+    }
     .tickets-box{
         background-image: url(tickets-background-MB.png);
     }
     .giftcard-box{
         background-image: url(giftcard-background-MB.png);
     }
-    .contact-000,.contact-005{ font-size: 40px; }
+    .contact-p, .contact-p span{ font-size: 40px; }
 }
 </style>
 
@@ -1119,7 +1125,7 @@ body{
     <img src="borde celeste.png" width="100%" height="100%" style="transform: rotate(180deg);" />
 </div>
 
-<div class="df fc fw ac jc" style="width: 100%; height: 100%; background: #4188c8;">
+<div class="df fc fnw ac jc" style="width: 100%; height: 100%; background: #4188c8;">
     <h2 style="font-size: 48px; margin-bottom: 10px;-webkit-text-stroke: 1px #4188c8;font-weight: 800;">CUMPLEAÑOS EN AEROPARK</h2>
     <div class="df fr fw ac jc">
         <div class="birthday-texts-box df fc jc ac p-texts">
@@ -1222,8 +1228,8 @@ body{
     <img src="borde azul claro.png" width="100%" height="100%" style="transform: rotate(180deg);" />
 </div>
 
-<div class="df fc fw ac jc" style="width: 100%; height: 100%; background: #186ab3;">
-    <h2 style="font-size: 48px; margin-bottom: 10px;-webkit-text-stroke: 1px #186ab3;font-weight: 800;">EVENTOS DE ALTO VUELO PARA TU EMPRESA</h2>
+<div class="df fc fnw ac jc" style="width: 100%; height: 100%; background: #186ab3;">
+    <h2 style="font-size: 48px; margin-bottom: 10px;-webkit-text-stroke: 1px #186ab3;font-weight: 800;text-align: center;">EVENTOS DE ALTO VUELO PARA TU EMPRESA</h2>
     <div class="df fr fw ac jc">
         <div class="birthday-texts-box df fc jc ac p-texts">
             <p style="margin-bottom: 10px;">
@@ -1310,7 +1316,7 @@ body{
     <img src="borde azul claro.png" width="100%" height="100%" />
 </div>
 
-<div class="df fc fw ac jc" style="width: 100%; height: 100%; background: #00549b;">
+<div class="df fc fnw ac jc" style="width: 100%; height: 100%; background: #00549b;">
     <h2 style="font-size: 48px; margin-bottom: -10px; -webkit-text-stroke: 1px #00549b;font-weight: 800;">SEGUROS DE PRINCPIO A FIN</h2>
     <span style="font-size: 30px; font-weight: 300;font-style: italic;">¡HACER DE AEROPARK UN LUGAR SEGURO ES NUESTRA PRIORIDAD!</span><br />
     <div class="df fr fw ac jc">
@@ -1370,7 +1376,7 @@ body{
 <div class="footer df jsa ac fw" style="width: 100%; height: 100%; background: #fff;">
     <div class="df fc jc as fw" width="50%">
         <div class="df fc">
-            <p style="color: #000;">
+            <p class="contact-p">
                 <span class="contact-000">CONACTO:</span><br />
                 Teléfono: <span class="contact-005">+54 11 4795-6033.</span><br />
                 WhatsApp: <span class="contact-005">+54 9 11 4185-6624.</span><br />
